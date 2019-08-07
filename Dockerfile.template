@@ -1,0 +1,18 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:10-run
+
+WORKDIR /usr/src/app
+
+# Copy package.json first for better cache on later pushes
+COPY package*.json ./
+
+# Note that this is not the most optimal way to install dependencies. It's just for demonstration purposes.
+RUN apk add --no-cache --virtual .gyp python make g++ linux-headers && npm install && apk del .gyp
+
+# This will copy all files in our root to the working  directory in the container
+COPY . ./
+
+# Enable udevd so that the arduino device shows up in our container.
+ENV UDEV=on
+
+# server.js will run when container starts up on the device
+CMD ["npm", "start"]

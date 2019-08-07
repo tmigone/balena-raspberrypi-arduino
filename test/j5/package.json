@@ -1,0 +1,14 @@
+{
+  "name": "j5-tests",
+  "version": "1.0.0",
+  "description": "Sample code to test Johnny Five integration.",
+  "main": "arduino.js",
+  "scripts": {
+    "start": "node arduino.js"
+  },
+  "author": "Tomás Migone <tomasmigone@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "johnny-five": "^1.2.0"
+  }
+}

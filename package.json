@@ -1,0 +1,23 @@
+{
+  "name": "balena-raspberrypi-arduino",
+  "version": "1.0.0",
+  "description": "Sample project to showcase Rasbperry Pi and Arduino working together using balena and firmata.",
+  "main": "arduino.js",
+  "scripts": {
+    "start": "node arduino.js",
+    "test": "node raw.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasmigone/balena-raspberrypi-arduino.git"
+  },
+  "author": "Tomás Migone <tomasmigone@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomasmigone/balena-raspberrypi-arduino/issues"
+  },
+  "homepage": "https://github.com/tomasmigone/balena-raspberrypi-arduino#readme",
+  "dependencies": {
+    "johnny-five": "^1.2.0"
+  }
+}
